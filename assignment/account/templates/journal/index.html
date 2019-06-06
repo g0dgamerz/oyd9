@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block body %}
+ <main role="main">
+         <section class="jumbotron text-center">
+            <div class="container">
+               <div class="card">
+                  <div class="card-header">
+                     Jouurnal
+                     <strong>01/01/2019</strong>
+                     <span class="float-right"> <strong>Status:</strong> Pending</span>
+                  </div>
+                  <div class="card-body">
+                     <div class="col-sm-2">
+                        <p>J.V no: <input type="number" name=""></p>
+                        <p>Date:<input id="datepicker" width="180" /></p>
+                     </div>
+                     <div class="row mb-12" style="text-align: center;">
+                        <div class="col-sm-12">
+                           <h6 class="mb-2">Journal Voucher</h6>
+                           <div>
+                              <strong>OYD</strong>
+                           </div>
+                           <div>Tinkune, Koteshor</div>
+                           <div>Email: oyd@gmail.com</div>
+                           <div>Phone: +977 444 666 3333</div>
+                        </div>
+                     </div>
+                     <div class="table-responsive-sm">
+                        <table class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th class="center">sno</th>
+                                 <th>Explanations</th>
+                                 <th>Debit</th>
+                                 <th class="right">Credit</th>
+                                 <th class="right">Balance</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                           {% for j in journal %}
+                              <tr>
+                                 <td class="center">{{ j.id }}</td>
+                                 <td class="left strong">{{ j.explanation }}</td>
+                                 <td class="left">{{ j.debit }}</td>
+                                 <td class="right">{{ j.credit }}</td>
+                                 <td class="center">{{ j.balance }}</td>
+                              </tr>
+                           {% endfor %}
+                           </tbody>
+                        </table>
+                        <a href="{% url 'add' %}" class="btn btn-warning btn-sm btn-pad" role="button"> add Journal data</a>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-4 col-sm-5">
+                        </div>
+                        <div class="col-lg-4 col-sm-5 ml-auto">
+                           <table class="table table-clear">
+                              <tbody>
+                                 <tr>
+                                    <td class="left">
+                                       <strong>total</strong>
+                                    </td>
+                                    <td class="right">$8.497,00</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="left">
+                                       <strong>Approved by</strong>
+                                    </td>
+                                    <td class="right">Jidesh Govinda Baidya</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="left">
+                                       <strong>Signature</strong>
+                                    </td>
+                                    <td class="right">............</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+{% endblock %}

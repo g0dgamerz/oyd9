@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block body %}
+
+  <main role="main">
+         <section class="jumbotron text-center">
+            <div class="container">
+               <div class="card">
+                  <div class="card-header">
+                     Preview
+                     <strong>01/01/2019</strong> 
+                     <span class="float-right"> <strong>Status:</strong> Pending</span>
+                  </div>
+                  <div class="card-body">
+                     <div class="row mb-12" style="text-align: center;">
+                        <div class="col-sm-12">
+                           <h6 class="mb-3">Journal Voucher</h6>
+                           <div>
+                              <strong>OYD</strong>
+                           </div>
+                           <div>Tinkune, Koteshor</div>
+                           <div>Email: oyd@gmail.com</div>
+                           <div>Phone: +977 444 666 3333</div>
+                        </div>
+                        <table class="table table-bordered ">
+                           <thead>
+                              <tr>
+                                 <th scope="col">sno</th>
+                                 <th scope="col">Type</th>
+                                 <th scope="col">Details</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>Journal</td>
+                                 <td><a href="journaldetail.html">Details <i class="fas fa-info"></a></i></td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>Stock</td>
+                                 <td><a href="stockdetail.html">Details <i class="fas fa-info"></a></i></td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>Ladger</td>
+                                 <td><a href="ladgerdetail.html">Details <i class="fas fa-info"></i></a></td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>Bill</td>
+                                 <td><a href="billdetail.html">Details <i class="fas fa-info"></i></a></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+{% endblock %}

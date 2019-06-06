@@ -1,0 +1,30 @@
+
+
+
+in INSTALL_APP[
+..........
+'name.apps.classname',
+]
+
+
+
+python mange.py makemigrations appname
+python mange.py migrate
+
+
+python manage.py sqlmigrate firstApp 0001_initial
+
+
+python manage.py shell
+
+from app_name.models import Question,choices
+q=question( question_text="whats new',pub_date=timezone.now())
+
+
+url config is used to connect the url.py and views.py file
+
+    try:
+        question=Question.objects.get(pk=question_id)
+    except Question.DoesNotExits:
+        raise Http404('question doesnot exit')
+    return render(request,'firstApp/details.html',{'question':question})
